@@ -16,10 +16,13 @@ for lc in lcs:
     with lc.open() as f:
         # The lightcurve data are in the first FITS HDU.
         hdu_data = f[1].data
-        time.append(hdu_data["time"])
-        flux.append(hdu_data["sap_flux"])
-        ferr.append(hdu_data["sap_flux_err"])
+        time = np.append(time, hdu_data["time"])
+        flux = np.append(flux, hdu_data["sap_flux"])
+        ferr = np.append(ferr, hdu_data["sap_flux_err"])
         quality.append(hdu_data["sap_quality"])
+ivar = 1. / (ferr ** 2)
+
+print(time.shape, flux.shape)
 
 plt.clf()
 plt.plot(time, flux, "k.", alpha=0.25)
