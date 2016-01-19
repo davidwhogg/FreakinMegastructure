@@ -1,2 +1,5 @@
 *~
+*.pdf
+*.png
 *.pyc
+code/src
