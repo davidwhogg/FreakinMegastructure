@@ -9,3 +9,7 @@ building a model of the alien technology using Bonneau's *computational telescop
 **Copyright 2016 the authors.**
 If anything in this repository could be considered code, you can consider it licensed *MIT*.
 See the file `LICENSE` for more details.
+
+## Dependencies
+- numpy, matplotlib, etc
+- [kplr](http://dan.iel.fm/kplr/) to get the data
